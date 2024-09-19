@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+ 
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* This hides horizontal overflow */
+}
+.blank{
+  height: 90vh;
+  width: 100%;
+  background-color: aliceblue;
+
+}
+@media (max-width:786px) {
+  .blank{
+    height: 80vh;
+  }
+}

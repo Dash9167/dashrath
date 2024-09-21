@@ -1,5 +1,96 @@
-.education{
-height: 91vh;
-width: 100%;
-background-color: rgb(32, 139, 0);
+.education {
+  height: 90vh;
+  width: 100%;
+  background-color: #fff;
+  /* background: linear-gradient(to right, #0072ff, #00c6ff); Blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.education-container {
+  width: 90%;
+
+  display: flex;
+  height: 80vh;
+  margin: 1rem;
+}
+.education-container h2{
+    justify-content: start;
+}
+.education-col {
+  display: grid;
+  grid-template-columns: 1f 1f;
+  grid-column-gap:20px ;
+  flex-basis: 50%;
+}
+.education-col h2{
+    color: green;
+    font-size: 35px;
+    font-weight: 400px;
+    letter-spacing: 3px;
+}
+.education-box{
+
+    background-color: rgb(178, 199, 192);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 7rem;
+    position: relative;
+    cursor: pointer;
+    
+
+}
+.education-box:hover{
+    transform: scaleX(10px);
+    background-color: #fff;
+    border: 1px solid rgba(111, 114, 119, 0.5);
+    box-shadow: 0 0 5px 2px rgba(36, 95, 213, 0.5);
+}
+.education-box:hover .round{
+   
+    background-color: blue;
+    
+}
+.round{
+    position: absolute;
+    left: -3.1rem;
+   top: -0.5%;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: green;
+}
+.content{
+    border-left: 10px solid #000;
+    padding: 0 1rem;
+    height: max-content;
+   
+}
+.education-box p,h4{
+    margin-top: 5px;
+}
+.education-box h3{
+    color: green;
+}
+@media (max-width: 786px) {
+  .education {
+    height: max-content;
+    width: 100%;
+  }
+  .education-container {
+    flex-direction: column;
+    height: max-content;
+  }
+  .education-box h3{
+    font-size: 20px;
+  }
+  .education-box{
+    height: max-content;
+  }
+  .education-box p{
+    text-align: justify;
+  }
 }

@@ -49,9 +49,15 @@ h2 {
 }
 .socail-link {
   margin-top: 1rem;
+ 
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  
 }
+
 .socail-link i {
-  font-size: 27px;
+  font-size: 35px;
   margin-right: 20px;
   cursor: pointer;
   transition: 1.2s;
@@ -69,6 +75,7 @@ h2 {
   flex-direction: column;
   width: 100%;
   margin: 5px;
+  overflow: hidden;
 }
 label {
   font-size: 23px;
@@ -133,8 +140,8 @@ form{
   }
 }
 .message {
-  background-color: antiquewhite;
-  color: #0072ff;
+  background-color: #4caf50;
+  color: white;
   width: max-content;
   padding: 10px 1rem;
   position: absolute;
@@ -142,6 +149,10 @@ form{
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 1);
   z-index: 1;
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideIn 0.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .message i {
   position: relative;
@@ -152,7 +163,19 @@ form{
   color: red;
 }
 .hide {
-  display: none;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End at the normal position */
+    opacity: 1;
+  }
 }
 input[type="text"]:focus {
   outline: none;

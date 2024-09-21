@@ -19,3 +19,6 @@ body, html {
     height: 80vh;
   }
 }
+html {
+  scroll-behavior: smooth;
+}

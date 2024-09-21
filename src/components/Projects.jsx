@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import "./css/projects.css";
 import p1 from "./assets/p1.png";
 import p2 from "./assets/p2.png";
@@ -8,13 +9,25 @@ import p5 from "./assets/p5.png";
 import p6 from "./assets/p6.png";
 import Card from "./card";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  }, []);
   return (
     <div className="projects" id="projects-page">
       <h1>My Works</h1>
       <div className="project-content">
         <Card
           img={p1}
+          title="Travel Website"
           language={["HTML", "CSS3", "Javascript", "React"]}
           hyperlink=" https://ddjpmx.csb.app/"
           code="https://github.com/Dash9167/travel-website-react-js"
@@ -22,6 +35,8 @@ const Projects = () => {
         />
         <Card
           img={p6}
+          title="Word Wave"
+          
           language={["HTML", "CSS3", "Javascript", "React"]}
           hyperlink="https://c2mg2w.csb.app/"
           code="https://github.com/Dash9167/WordWave"
@@ -29,6 +44,8 @@ const Projects = () => {
         />
         <Card
           img={p2}
+          title="Eatmore Website"
+
           language={["HTML", "CSS3", "Javascript", "React"]}
           hyperlink="https://github.com/Dash9167/EatMore-E-commerce-website"
           code="https://github.com/Dash9167/EatMore-E-commerce-website"
@@ -36,6 +53,8 @@ const Projects = () => {
         />
         <Card
           img={p3}
+          title="Taza Khabar Website"
+
           language={["HTML", "CSS3", "Javascript", "React", "API"]}
           hyperlink="https://github.com/Dash9167/taza-Khabar-news-"
           code="https://github.com/Dash9167/taza-Khabar-news-"
@@ -43,6 +62,8 @@ const Projects = () => {
         />
         <Card
           img={p4}
+          title="7up 7Down Dice Game"
+
           language={["HTML", "CSS3", "Javascript", "React"]}
           hyperlink="https://4883fw.csb.app/"
           code="https://github.com/Dash9167/7-up-7-Down-dice-Game-React.js-"
@@ -53,6 +74,8 @@ const Projects = () => {
           round."
         />
         <Card
+          title="Clinic Management System"
+        
           img={p5}
           language={["HTML", "CSS3", "Javascript", "Java", "Jsp", "Servlet"]}
           hyperlink="https://github.com/Dash9167/Clinic-Management-System"

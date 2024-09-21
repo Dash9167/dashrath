@@ -112,6 +112,10 @@
   }
   .right-home button {
     width: 100%;
+   
+  }
+  .right-home a button i{
+    color: #0072ff;
   }
   .right-home h3{
     text-align: center;

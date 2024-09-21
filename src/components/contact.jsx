@@ -2,8 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./css/contact.css";
 import dev from "./assets/d1.png";
 import Contact2 from "./contact2";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 const Contact = () => {
+  useEffect(()=>{
+    Aos.init({
+once:true,
+duration:1500
+    });
+  })
   const [visible,setvisible]=useState(false);
 
 const sendvisible=(data)=>{
@@ -13,7 +20,7 @@ useEffect(()=>{
   if(visible){
     const timer=setTimeout(() => {
       setvisible(false)
-    }, 2000);
+    }, 1500);
     return ()=>clearTimeout(timer)
   }
   
@@ -36,9 +43,9 @@ useEffect(()=>{
           <div className="contact-img">
             <img src={dev} alt="" />
           </div>
-          <div className="socail">
+          <div className="socail" >
             <h3>Connect With Us</h3>
-            <div className="socail-link">
+            <div className="socail-link" data-aos="fade-right">
              <a href="https://www.instagram.com/hritikx__45?igsh=MWJ5aHN1ZTFuczdlZA=="> <i className="fa-brands fa-instagram"></i></a>
               <a href="https://github.com/Dash9167"><i className="fa-brands fa-github"></i></a>
             <a href="https://www.facebook.com/hritik.yadav.3154284?mibextid=ZbWKwL">  <i className="fa-brands fa-square-facebook"></i></a>
